@@ -1,0 +1,103 @@
+{
+  "id": "Form_1",
+  "type": "default",
+  "components": [
+    {
+      "id": "Text_1",
+      "type": "text",
+      "text": "# Invoice\n\nLorem _ipsum_ __dolor__ `sit`.\n\nA list of BPMN symbols:\n* Start Event\n* Task\nLearn more about [forms](https://bpmn.io).\n\nThis [malicious link](javascript:throw onerror=alert,'some string',123,'haha') __should not work__."
+    },
+    {
+      "id": "Textfield_1",
+      "key": "creditor",
+      "label": "Creditor",
+      "type": "textfield",
+      "validate": {
+        "required": true
+      },
+      "properties": {
+        "firstName": "John",
+        "middleName": "Richard",
+        "lastName": "Doe"
+      }
+    },
+    {
+      "id": "Textfield_2",
+      "description": "An invoice number in the format: C-123.",
+      "key": "invoiceNumber",
+      "label": "Invoice Number",
+      "type": "textfield",
+      "validate": {
+        "pattern": "^C-[0-9]+$"
+      }
+    },
+    {
+      "id": "Number_1",
+      "key": "amount",
+      "label": "Amount",
+      "type": "number",
+      "validate": {
+        "min": 0,
+        "max": 1000
+      }
+    },
+    {
+      "id": "Checkbox_1",
+      "key": "approved",
+      "label": "Approved",
+      "type": "checkbox"
+    },
+    {
+      "id": "Textfield_3",
+      "key": "approvedBy",
+      "label": "Approved By",
+      "type": "textfield"
+    },
+    {
+      "id": "Radio_1",
+      "key": "product",
+      "label": "Product",
+      "type": "radio",
+      "values": [
+        {
+          "label": "Camunda Platform",
+          "value": "camunda-platform"
+        },
+        {
+          "label": "Camunda Cloud",
+          "value": "camunda-cloud"
+        }
+      ]
+    },
+    {
+      "id": "Select_1",
+      "key": "language",
+      "label": "Language",
+      "type": "select",
+      "values": [
+        {
+          "label": "German",
+          "value": "german"
+        },
+        {
+          "label": "English",
+          "value": "english"
+        }
+      ]
+    },
+    {
+      "id": "Button_1",
+      "action": "submit",
+      "key": "submit",
+      "label": "Submit",
+      "type": "button"
+    },
+    {
+      "id": "Button_2",
+      "action": "reset",
+      "key": "reset",
+      "label": "Reset",
+      "type": "button"
+    }
+  ]
+}

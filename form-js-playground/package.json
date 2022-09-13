@@ -1,0 +1,52 @@
+{
+  "name": "@bpmn-io/form-js-playground",
+  "version": "0.7.0",
+  "description": "A form-js playground",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs"
+    },
+    "./dist/assets/form-js-playground.css": "./dist/assets/form-js-playground.css"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.es.js",
+  "umd:main": "dist/form-playground.umd.js",
+  "scripts": {
+    "all": "run-s test",
+    "start": "SINGLE_START=basic npm run dev",
+    "dev": "npm test -- --auto-watch --no-single-run",
+    "test": "karma start"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bpmn-io/form-js.git",
+    "directory": "packages/form-js-playground"
+  },
+  "author": {
+    "name": "bpmn.io contributors",
+    "url": "https://github.com/bpmn-io"
+  },
+  "dependencies": {
+    "@bpmn-io/form-js": "^0.7.0",
+    "@codemirror/basic-setup": "^0.18.2",
+    "@codemirror/lang-json": "^0.18.0",
+    "@codemirror/state": "^0.18.7",
+    "downloadjs": "^1.4.7",
+    "file-drops": "^0.4.0",
+    "mitt": "^3.0.0",
+    "preact": "^10.5.14"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "devDependencies": {
+    "css-loader": "^6.3.0",
+    "rollup-plugin-css-only": "^3.1.0",
+    "style-loader": "^3.3.0"
+  }
+}
